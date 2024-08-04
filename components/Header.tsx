@@ -1,6 +1,14 @@
-import React from 'react'
+'use client'
+import React, { useState } from 'react'
+import { Menu, X } from 'lucide-react'
 
 function Header() {
+  const [isMenuOpen, setIsMenuOpen] = useState(false)
+
+  const toggleMenu = () => {
+    setIsMenuOpen(!isMenuOpen)
+  }
+
   return (
     <div>
       <div className="mx-auto flex items-center justify-center bg-gray-800 px-4 py-2 font-sans text-sm text-gray-200">
@@ -10,7 +18,7 @@ function Header() {
         <span className="mr-4 whitespace-nowrap">-</span>
         <span className="whitespace-nowrap">No Minimums</span>
       </div>
-      <header className="mx-auto flex max-w-[1400px] items-center justify-between bg-white px-20 py-4">
+      <header className="mx-auto flex max-w-[1400px] items-center justify-between bg-white px-4 py-4 md:px-20">
         <div className="flex-1">
           <div className="inline-block">
             <img
@@ -20,7 +28,7 @@ function Header() {
             />
           </div>
         </div>
-        <nav className="flex-2 flex justify-center">
+        <nav className="md:flex-2 hidden md:flex md:justify-center">
           <a href="https://www.google.com" className="mx-4 font-medium text-gray-800">
             Home
           </a>
@@ -34,12 +42,43 @@ function Header() {
             Contact
           </a>
         </nav>
-        <div className="flex flex-1 justify-end">
+        <div className="hidden flex-1 justify-end md:flex">
           <button className="cursor-pointer rounded-full bg-gray-600 px-6 py-3 font-normal text-white">
             REQUEST A QUOTE
           </button>
         </div>
+        <div className="md:hidden">
+          <button onClick={toggleMenu} className="text-gray-800">
+            {isMenuOpen ? <X size={24} /> : <Menu size={24} />}
+          </button>
+        </div>
       </header>
+      {isMenuOpen && (
+        <div className="fixed inset-0 z-50 bg-white">
+          <div className="flex h-full flex-col items-center justify-center">
+            <button onClick={toggleMenu} className="absolute right-4 top-4 text-gray-800">
+              <X size={24} />
+            </button>
+            <nav className="flex flex-col items-center space-y-4">
+              <a href="https://www.google.com" className="text-xl font-medium text-gray-800">
+                Home
+              </a>
+              <a href="https://www.google.com" className="text-xl font-medium text-gray-800">
+                About
+              </a>
+              <a href="https://www.google.com" className="text-xl font-medium text-gray-800">
+                Services
+              </a>
+              <a href="https://www.google.com" className="text-xl font-medium text-gray-800">
+                Contact
+              </a>
+            </nav>
+            <button className="mt-8 cursor-pointer rounded-full bg-gray-600 px-6 py-3 font-normal text-white">
+              REQUEST A QUOTE
+            </button>
+          </div>
+        </div>
+      )}
     </div>
   )
 }
