@@ -1,26 +1,23 @@
 /** @type {import("pliny/config").PlinyConfig } */
 const siteMetadata = {
-  title: 'Next.js Starter Blog',
-  author: 'Tails Azimuth',
-  headerTitle: 'TailwindBlog',
-  description: 'A blog created with Next.js and Tailwind.css',
-  language: 'en-us',
+  title: "INK'T Screen Printing",
+  author: 'Sabrina',
+  headerTitle: "INK'T",
+  description:
+    "Ottawa's trusted screen printing and embroidery company since 2005, providing quality custom clothing and dependable service.",
+  language: 'en-ca',
   theme: 'system', // system, dark or light
-  siteUrl: 'https://tailwind-nextjs-starter-blog.vercel.app',
-  siteRepo: 'https://github.com/timlrx/tailwind-nextjs-starter-blog',
-  siteLogo: `${process.env.BASE_PATH || ''}/static/images/logo.png`,
-  socialBanner: `${process.env.BASE_PATH || ''}/static/images/twitter-card.png`,
-  mastodon: 'https://mastodon.social/@mastodonuser',
-  email: 'address@yoursite.com',
-  github: 'https://github.com',
-  x: 'https://twitter.com/x',
-  // twitter: 'https://twitter.com/Twitter',
-  facebook: 'https://facebook.com',
-  youtube: 'https://youtube.com',
-  linkedin: 'https://www.linkedin.com',
-  threads: 'https://www.threads.net',
-  instagram: 'https://www.instagram.com',
-  locale: 'en-US',
+  siteUrl: 'inkt.vercel.app', // Assumed URL, please replace with actual URL
+  siteRepo: 'https://github.com/inkt-screenprinting/website', // Assumed repo, please replace with actual repo
+  siteLogo: `https://gdtffvonnguufizhazwx.supabase.co/storage/v1/object/public/test/919cb172-25de-421c-90ea-3e66b8c0338d.png`,
+  socialBanner: `https://gdtffvonnguufizhazwx.supabase.co/storage/v1/object/public/test/919cb172-25de-421c-90ea-3e66b8c0338d.png`,
+  email: 'info@inkt-screenprinting.ca', // Assumed email, please replace with actual email
+  github: 'https://github.com/inkt-screenprinting', // Assumed GitHub, please replace with actual GitHub
+  x: 'https://twitter.com/inktscreenprint', // Assumed X (Twitter) handle, please replace with actual handle
+  facebook: 'https://facebook.com/inktscreenprinting', // Assumed Facebook, please replace with actual Facebook
+  instagram: 'https://www.instagram.com/inktscreenprinting', // Assumed Instagram, please replace with actual Instagram
+  linkedin: 'https://www.linkedin.com/company/inkt-screen-printing', // Assumed LinkedIn, please replace with actual LinkedIn
+  locale: 'en-CA',
   analytics: {
     // If you want to use an analytics provider you have to add it to the
     // content security policy in the `next.config.js` file.
@@ -34,7 +31,7 @@ const siteMetadata = {
     },
     // plausibleAnalytics: {
     //   plausibleDataDomain: '', // e.g. tailwind-nextjs-starter-blog.vercel.app
-         // If you are hosting your own Plausible.
+    // If you are hosting your own Plausible.
     //   src: '', // e.g. https://plausible.my-domain.com/js/script.js
     // },
     // simpleAnalytics: {},
