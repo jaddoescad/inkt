@@ -28,7 +28,7 @@ function ServicesSection() {
       <h2 className="mb-1 mt-4 py-2 text-2xl font-bold">Our Services</h2>
       <div className="flex flex-wrap justify-center">
         {services.map((service, index) => (
-          <div key={index} className="m-2 flex w-60 flex-col overflow-hidden rounded-lg bg-white">
+          <div key={index} className="m-4 flex w-64 flex-col overflow-hidden rounded-lg bg-white">
             <img
               src={service.imgSrc}
               alt={service.title}

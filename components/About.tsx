@@ -3,7 +3,7 @@ import React from 'react'
 function AboutSection() {
   return (
     <div className="flex flex-col font-sans">
-      <div className="mx-auto max-w-[1000px] max-w-full flex-1 px-12 py-10">
+      <div className="mx-auto max-w-[1000px] flex-1 px-12 py-10">
         <h2 className="mb-2font-semibold text-center text-xs font-semibold text-gray-800">
           MAKE SOMETHING UNIQUE WITH US
         </h2>
