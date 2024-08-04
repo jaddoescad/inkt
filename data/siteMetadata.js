@@ -7,7 +7,7 @@ const siteMetadata = {
     "Ottawa's trusted screen printing and embroidery company since 2005, providing quality custom clothing and dependable service.",
   language: 'en-ca',
   theme: 'system', // system, dark or light
-  siteUrl: 'inkt.vercel.app', // Assumed URL, please replace with actual URL
+  siteUrl: 'https://www.inkt.vercel.app', // Assumed URL, please replace with actual URL
   siteRepo: 'https://github.com/inkt-screenprinting/website', // Assumed repo, please replace with actual repo
   siteLogo: `https://gdtffvonnguufizhazwx.supabase.co/storage/v1/object/public/test/919cb172-25de-421c-90ea-3e66b8c0338d.png`,
   socialBanner: `https://gdtffvonnguufizhazwx.supabase.co/storage/v1/object/public/test/919cb172-25de-421c-90ea-3e66b8c0338d.png`,
