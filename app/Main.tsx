@@ -3,10 +3,16 @@ import Tag from '@/components/Tag'
 import siteMetadata from '@/data/siteMetadata'
 import { formatDate } from 'pliny/utils/formatDate'
 import NewsletterForm from 'pliny/ui/NewsletterForm'
+import { sortPosts, allCoreContent } from 'pliny/utils/contentlayer'
+import { allBlogs } from 'contentlayer/generated'
+import Main from './Main'
 
 const MAX_DISPLAY = 5
 
-export default function Home({ posts }) {
+export default function Home({ allBlogs }) {
+  const sortedPosts = sortPosts(allBlogs)
+  const posts = allCoreContent(sortedPosts)
+
   return (
     <>
       <div className="divide-y divide-gray-200 dark:divide-gray-700">
