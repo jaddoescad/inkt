@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react'
+import React from 'react';
 
 function GallerySection() {
   const images = [
@@ -10,21 +10,24 @@ function GallerySection() {
     'https://reallygooddesigns.com/wp-content/uploads/2021/11/Concept-T-Shirt-Design-Ideas-23.png',
     'https://i.pinimg.com/736x/e0/f3/66/e0f3660feceb06d502f4b4b85408f1d8.jpg',
     'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTTgNAvPILFIBF7EBhbFJ-aX5lvdHqW2NP2-g&s',
-  ]
+  ];
 
   return (
-    <div className="mx-auto max-w-7xl px-10 py-16">
-      <div className="grid grid-cols-2 justify-center gap-4 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-4">
-        {images.map((image, index) => (
-          <div
-            key={index}
-            className="aspect-square bg-cover bg-center"
-            style={{ backgroundImage: `url('${image}')` }}
-          ></div>
-        ))}
+    <div className="bg-white py-16">
+      <div className="mx-auto max-w-5xl px-4 sm:px-6 lg:px-8">
+        <div className="grid grid-cols-2 gap-4 sm:grid-cols-3 md:grid-cols-4">
+          {images.map((image, index) => (
+            <div
+              key={index}
+              className="aspect-square bg-cover bg-center"
+              style={{ backgroundImage: `url('${image}')` }}
+            ></div>
+          ))}
+        </div>
       </div>
     </div>
-  )
+  );
 }
 
-export default GallerySection
+
+export default GallerySection;

@@ -1,45 +1,62 @@
 import React from 'react'
+import GoogleMap from './map'
 
-function Footer() {
+const Footer = () => {
   return (
-    <footer className="mt-8 bg-white py-8">
-      <div className="mx-auto flex max-w-5xl items-start justify-between px-4">
-        <div className="mb-4 w-1/4 flex-none">
-          <img
-            src="https://gdtffvonnguufizhazwx.supabase.co/storage/v1/object/public/test/60175d51-9086-4a73-807d-15983d273132.png"
-            alt="Logo"
-            className="h-auto max-w-xs"
-          />
-        </div>
-        <div className="mb-4 w-1/3 flex-none">
-          <h3 className="mb-4 mt-0 text-base font-bold">Contact Info</h3>
-          <p className="mb-2 text-sm">123 Main Street, City, State 12345</p>
-          <p className="mb-2 text-sm">Phone: (123) 456-7890</p>
-          <p className="mb-2 text-sm">Email: info@example.com</p>
-        </div>
-        <div className="mb-4 w-1/3 flex-none">
-          <h3 className="mb-4 mt-0 text-base font-bold">Our Services</h3>
-          <ul className="m-0 list-none p-0">
-            <li className="mb-2">
-              <a href="https://www.google.com" className="text-sm text-gray-700">
-                Screen Printing
-              </a>
-            </li>
-            <li className="mb-2">
-              <a href="https://www.google.com" className="text-sm text-gray-700">
-                Embroidery
-              </a>
-            </li>
-            <li className="mb-2">
-              <a href="https://www.google.com" className="text-sm text-gray-700">
-                Digitization
-              </a>
-            </li>
-          </ul>
+    <footer className="bg-white">
+      <div className="mx-auto max-w-5xl px-4 py-20 md:px-8">
+        <div className="flex flex-wrap">
+          <div className="mb-6 w-full md:mb-0 md:w-1/4">
+            <img
+              src="https://gdtffvonnguufizhazwx.supabase.co/storage/v1/object/public/test/60175d51-9086-4a73-807d-15983d273132.png"
+              alt="Logo"
+              className="mb-4 h-12"
+            />
+          </div>
+          <div className="flex w-full flex-wrap justify-end md:w-3/4">
+            <div className="mb-6 w-full px-4 md:mb-0 md:w-1/2 lg:w-1/3">
+              <h3 className="mb-4 text-lg font-semibold">Contact Info</h3>
+              <p className="mb-2 text-sm">1 Jerrylin cres, Ottawa, ON K2J 1H3</p>
+              <p className="mb-2 text-sm">Phone: (343) 202-0766</p>
+              <p className="text-sm">Email: info@example.com</p>
+            </div>
+            <div className="w-full px-4 md:w-1/2 lg:w-1/3">
+              <h3 className="mb-4 text-lg font-semibold">Our Services</h3>
+              <ul>
+                <li className="mb-2">
+                  <a
+                    href="#"
+                    className="text-sm transition-colors duration-300 hover:text-gray-600"
+                  >
+                    Screen Printing
+                  </a>
+                </li>
+                <li className="mb-2">
+                  <a
+                    href="#"
+                    className="text-sm transition-colors duration-300 hover:text-gray-600"
+                  >
+                    Embroidery
+                  </a>
+                </li>
+                <li>
+                  <a
+                    href="#"
+                    className="text-sm transition-colors duration-300 hover:text-gray-600"
+                  >
+                    Digitization
+                  </a>
+                </li>
+              </ul>
+            </div>
+          </div>
         </div>
       </div>
-      <div className="mt-8 border-t border-gray-300 pt-4 text-center">
-        <p className="text-sm text-gray-500">© 2023 Your Company Name. All rights reserved.</p>
+<GoogleMap/>
+      <div className="bg-gray-900 py-4">
+        <div className="mx-auto max-w-7xl px-4 text-center text-sm text-white md:px-8">
+          <p>© {new Date().getFullYear()} INK'T. All rights reserved.</p>
+        </div>
       </div>
     </footer>
   )

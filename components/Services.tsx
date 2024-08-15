@@ -1,4 +1,5 @@
-import React from 'react'
+import React from 'react';
+
 
 function ServicesSection() {
   const services = [
@@ -21,28 +22,30 @@ function ServicesSection() {
         'Our in-house graphic designer will get your artwork prepped and ready for printing.',
       imgSrc: 'https://blog.uberprints.com/content/images/2021/07/workspace-design-your-own-2.jpg',
     },
-  ]
+  ];
 
   return (
-    <div className="bg-gray-100 p-4 pb-10 text-center">
-      <h2 className="mb-1 mt-4 py-2 text-2xl font-bold">Our Services</h2>
-      <div className="flex flex-wrap justify-center">
-        {services.map((service, index) => (
-          <div key={index} className="m-4 flex w-64 flex-col overflow-hidden rounded-lg bg-white">
-            <img
-              src={service.imgSrc}
-              alt={service.title}
-              className="mb-2 h-44 w-full object-cover"
-            />
-            <h3 className="mb-2 mt-3 px-5 text-sm font-bold">{service.title}</h3>
-            <p className="mt-1 flex-grow px-5 pb-4 text-xs leading-relaxed">
-              {service.description}
-            </p>
-          </div>
-        ))}
+    <div className="bg-gray-100 py-16">
+      <div className="mx-auto max-w-5xl px-4 sm:px-6 lg:px-8">
+        <h2 className="mb-8 text-center text-3xl font-bold">Our Services</h2>
+        <div className="grid gap-8 sm:grid-cols-2 lg:grid-cols-3">
+          {services.map((service, index) => (
+            <div key={index} className="flex flex-col overflow-hidden rounded-lg bg-white shadow">
+              <img
+                src={service.imgSrc}
+                alt={service.title}
+                className="h-48 w-full object-cover"
+              />
+              <div className="flex flex-grow flex-col p-6">
+                <h3 className="mb-2 text-xl font-semibold">{service.title}</h3>
+                <p className="mt-auto text-sm text-gray-600">{service.description}</p>
+              </div>
+            </div>
+          ))}
+        </div>
       </div>
     </div>
-  )
+  );
 }
 
-export default ServicesSection
+export default ServicesSection;

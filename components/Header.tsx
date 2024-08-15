@@ -10,15 +10,15 @@ function Header() {
   }
 
   return (
-    <div>
+    <div className="w-full bg-white">
       <div className="mx-auto flex items-center justify-center bg-gray-800 px-4 py-2 font-sans text-sm text-gray-200">
-        <span className="mr-4 whitespace-nowrap">123-456-7890</span>
+        <span className="mr-4 whitespace-nowrap">(343) 202-0766</span>
         <span className="mr-4 whitespace-nowrap">-</span>
         <span className="mr-4 whitespace-nowrap">Free Delivery over $50</span>
         <span className="mr-4 whitespace-nowrap">-</span>
         <span className="whitespace-nowrap">No Minimums</span>
       </div>
-      <header className="mx-auto flex max-w-[1400px] items-center justify-between bg-white px-4 py-4 md:px-20">
+      <header className="mx-auto flex max-w-7xl items-center justify-between px-4 py-4 md:px-8">
         <div className="flex-1">
           <div className="inline-block">
             <img
@@ -43,7 +43,7 @@ function Header() {
           </a>
         </nav>
         <div className="hidden flex-1 justify-end md:flex">
-          <button className="cursor-pointer rounded-full bg-gray-600 px-6 py-3 font-normal text-white">
+          <button className="cursor-pointer rounded-full  px-6 py-3 font-bold text-white" style={{ backgroundColor: '#B0B7B2' }}>
             REQUEST A QUOTE
           </button>
         </div>

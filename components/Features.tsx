@@ -33,19 +33,19 @@ function FeaturesSection() {
   ]
 
   return (
-    <div className="mx-auto box-border flex w-full flex-wrap justify-between overflow-hidden bg-gray-300 px-10 py-12">
-      <div className="mx-auto flex max-w-[1000px] flex-wrap justify-between">
+    <div className="mx-auto box-border flex w-full flex-wrap justify-between overflow-hidden bg-gray-300 px-4 sm:px-6 lg:px-10 py-8 sm:py-12">
+      <div className="mx-auto flex max-w-[1200px] flex-wrap justify-center">
         {features.map((feature, index) => (
           <div
             key={index}
-            className="mb-4 w-1/5 overflow-hidden rounded-md bg-transparent text-center"
+            className="mb-8 w-full sm:w-1/2 md:w-1/3 lg:w-1/4 overflow-hidden rounded-md bg-transparent text-center px-2 max-w-[300px]"
           >
             <div
-              className="h-24 bg-contain bg-center bg-no-repeat opacity-70"
+              className="h-24 bg-contain bg-center bg-no-repeat opacity-70 mb-4"
               style={{ backgroundImage: `url('${feature.imgSrc}')` }}
             ></div>
-            <div className="py-4">
-              <h3 className="mb-2 text-center text-sm opacity-60">{feature.title}</h3>
+            <div className="py-2">
+              <h3 className="mb-2 text-center text-sm font-semibold opacity-60">{feature.title}</h3>
               <p className="text-center text-xs text-gray-800 opacity-60">{feature.description}</p>
             </div>
           </div>

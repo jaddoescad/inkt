@@ -1,10 +1,10 @@
 import React from 'react'
 
-function AboutSection() {
+export default function AboutSection() {
   return (
     <div className="flex flex-col font-sans">
       <div className="mx-auto max-w-[1000px] flex-1 px-12 py-10">
-        <h2 className="mb-2font-semibold text-center text-xs font-semibold text-gray-800">
+        <h2 className="mb-2 text-center text-xs font-semibold text-gray-800">
           MAKE SOMETHING UNIQUE WITH US
         </h2>
         <h3 className="mb-1 mt-0 text-center text-4xl font-extrabold text-gray-800">
@@ -13,8 +13,8 @@ function AboutSection() {
         <p className="mb-10 mt-0 text-center text-base font-bold text-gray-600">
           Printed in Ottawa, CA
         </p>
-        <div className="mb-2 flex justify-between">
-          <p className="mr-4 flex-1 text-sm leading-relaxed text-gray-800">
+        <div className="mb-2 flex flex-col justify-between md:flex-row">
+          <p className="mb-4 flex-1 text-center text-sm leading-relaxed text-gray-800 md:mb-0 md:mr-4 md:text-left">
             <span className="font-bold">
               Previously Fiore Apparel, we have been Ottawa's trusted screen printing and embroidery
               company since 2005, providing a one-stop shop for quality custom clothing and
@@ -27,7 +27,7 @@ function AboutSection() {
             craftsmanship but also the values and identity of the individuals and organizations we
             serve.
           </p>
-          <p className="ml-4 flex-1 text-sm leading-relaxed text-gray-800">
+          <p className="flex-1 text-center text-sm leading-relaxed text-gray-800 md:ml-4 md:text-left">
             Over the years, we have built a loyal clientele spanning a wide range of industries and
             interests. From local schools and sports teams to renowned brands and businesses, we
             have had the privilege of serving diverse customers who trust us to bring their ideas to
@@ -35,19 +35,19 @@ function AboutSection() {
             uniforms, merchandise, or any other occasion, we are here to make it happen.
           </p>
         </div>
-        <div className="mt-8 flex justify-between py-4">
-          <div className="w-1/2 text-right">
+        <div className="mt-8 flex flex-col justify-between py-4 sm:flex-row">
+          <div className="mb-4 w-full text-center sm:mb-0 sm:w-1/2 sm:text-right mx-4">
             <a
               href="https://www.google.com"
-              className="text-decoration-none border-3 mr-4 inline-block rounded-full border-black bg-black px-5 py-3 text-sm font-bold text-white"
+              className="inline-block rounded-full border-2 border-black bg-black px-5 py-3 text-sm font-bold text-white"
             >
               HOW IT WORKS
             </a>
           </div>
-          <div className="w-1/2">
+          <div className="w-full text-center sm:w-1/2 sm:text-left mx-4">
             <a
               href="https://www.google.com"
-              className="text-decoration-none border-3 inline-block rounded-full border-black bg-transparent px-5 py-3 text-sm font-bold text-black"
+              className="inline-block rounded-full border-2 border-black bg-transparent px-5 py-3 text-sm font-bold text-black"
             >
               CONTACT
             </a>
@@ -57,5 +57,3 @@ function AboutSection() {
     </div>
   )
 }
-
-export default AboutSection
